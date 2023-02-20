@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC1-n"  [ C:\OrCAD\OrCAD_16.6_Lite\tools\capture\OPAMPLIFIERFINAL-SCHEMATIC1-n.sim ] 
+
+** Creating circuit file "OPAMPLIFIERFINAL-SCHEMATIC1-n.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "./opamplifierfinal-pspicefiles/opamplifierfinal.lib" 
+* From [PSPICE NETLIST] section of C:\Users\kkate\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 40 1Hz 1e+10
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC ".\OPAMPLIFIERFINAL-SCHEMATIC1.net" 
+
+
+.END

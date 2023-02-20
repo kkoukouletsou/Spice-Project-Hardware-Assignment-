@@ -1,0 +1,93 @@
+* source OPAMPLIFIERFINAL
+M_Q4         N00283 N00279 VSS VSS nfet  
++ L=1um  
++ W=1um         
+M_Q2         N00283 N01507 N00255 N00255 pfet  
++ L=2um  
++ W=5um         
+M_Q5         N00255 N00310 VDD VDD pfet  
++ L=1um  
++ W=1um         
+M_Q1         N00279 0 N00255 N00255 pfet  
++ L=2um  
++ W=5um         
+M_Q7         N00370 N00310 VDD VDD pfet  
++ L=1um  
++ W=8um         
+M_Q8         N00310 N00310 VDD VDD pfet  
++ L=1um  
++ W=1um         
+M_Q6         N00370 N00283 VSS VSS nfet  
++ L=1um  
++ W=13um         
+M_Q3         N00279 N00279 VSS VSS nfet  
++ L=1um  
++ W=1um         
+C_Cc         N00283 N00370  0.025pF  TC=0,0 
+I_I1         N00310 VSS DC 12uAdc  
+C_CL         0 N00370  2.18pF  TC=0,0 
+V_Vdd         VDD 0 1.854Vdc
+V_Vss         VSS 0 -1.854Vdc
+V_V1         N01507 0 DC 0Vdc AC 1Vac 
+
+
+** Wrapper definitions for AA legacy support **
+
+
+.model nfet nmos
+
++ level=3
++ phi=0.6
++ tox=2.12
++ xj=2e-007
++ tpg=1
++ vto=0.786
++ delta=6.967
++ ld=1.647
++ kp=9.6379
++ uo=591.7
++ theta=8.122
++ rsh=85.45
++ gamma=0.5863
++ nsub=1.616e+016
++ nfs=5e+012
++ vmax=208200
++ eta=7.066
++ kappa=1.396
++ cgdo=4.0241
++ cgso=4.0241
++ cgbo=3.6144
++ cj=3.8541
++ mj=1.1854
++ cjsw=1.394
++ mjsw=0.125195
++ pb=0.8
+
+
+.model pfet pmos
+
++ level=3
++ phi=0.6
++ tox=2.12
++ xj=2e-007
++ delta=1.52
++ ld=2.2
++ kp=2.9352
++ uo=180.2
++ theta=1.248
++ rsh=104.7
++ gamma=0.4863
++ nsub=1.89e+016
++ nfs=3.46e+012
++ vmax=373200
++ eta=1.641
++ kappa=9.694
++ cgdo=5.3752
++ cgso=5.3752
++ cgbo=3.365
++ cj=4.8447
++ mj=0.5027
++ cjsw=1.6457
++ mjsw=0.217168
++ pb=0.85
+

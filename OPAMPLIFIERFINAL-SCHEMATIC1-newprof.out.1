@@ -1,0 +1,246 @@
+
+**** 01/05/23 17:08:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-newprof"  [ C:\OrCAD\OrCAD_16.6_Lite\tools\capture\OPAMPLIFIERFINAL-SCHEMATIC1-newprof.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "OPAMPLIFIERFINAL-SCHEMATIC1-newprof.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "./opamplifierfinal-pspicefiles/opamplifierfinal.lib" 
+* From [PSPICE NETLIST] section of C:\Users\kkate\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC ".\OPAMPLIFIERFINAL-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING OPAMPLIFIERFINAL-SCHEMATIC1.net ****
+* source OPAMPLIFIERFINAL
+M_Q4         N00283 N00279 VSS VSS nfet  
++ L=1um  
++ W=1um         
+M_Q2         N00283 N01507 N00255 N00255 pfet  
++ L=2um  
++ W=5um         
+M_Q5         N00255 N00310 VDD VDD pfet  
++ L=1um  
++ W=1um         
+M_Q1         N00279 0 N00255 N00255 pfet  
++ L=2um  
++ W=5um         
+M_Q7         N00370 N00310 VDD VDD pfet  
++ L=1um  
++ W=8um         
+M_Q8         N00310 N00310 VDD VDD pfet  
++ L=1um  
++ W=1um         
+M_Q6         N00370 N00283 VSS VSS nfet  
++ L=1um  
++ W=13um         
+M_Q3         N00279 N00279 VSS VSS nfet  
++ L=1um  
++ W=1um         
+C_Cc         N00283 N00370  0.025pF  TC=0,0 
+I_I1         N00310 VSS DC 12uAdc  
+C_CL         0 N00370  2.18pF  TC=0,0 
+V_Vdd         VDD 0 1.854Vdc
+V_Vss         VSS 0 -1.854Vdc
+V_V1         N01507 0  
++PULSE 2 -2 1f 1f 0 5u 10u
+
+
+** Wrapper definitions for AA legacy support **
+
+
+.model nfet nmos
+
++ level=3
++ phi=0.6
++ tox=2.12
++ xj=2e-007
++ tpg=1
++ vto=0.786
++ delta=6.967
++ ld=1.647
++ kp=9.6379
++ uo=591.7
++ theta=8.122
++ rsh=85.45
++ gamma=0.5863
++ nsub=1.616e+016
++ nfs=5e+012
++ vmax=208200
++ eta=7.066
++ kappa=1.396
++ cgdo=4.0241
++ cgso=4.0241
++ cgbo=3.6144
++ cj=3.8541
++ mj=1.1854
++ cjsw=1.394
++ mjsw=0.125195
++ pb=0.8
+
+
+.model pfet pmos
+
++ level=3
++ phi=0.6
++ tox=2.12
++ xj=2e-007
++ delta=1.52
++ ld=2.2
++ kp=2.9352
++ uo=180.2
++ theta=1.248
++ rsh=104.7
++ gamma=0.4863
++ nsub=1.89e+016
++ nfs=3.46e+012
++ vmax=373200
++ eta=1.641
++ kappa=9.694
++ cgdo=5.3752
++ cgso=5.3752
++ cgbo=3.365
++ cj=4.8447
++ mj=0.5027
++ cjsw=1.6457
++ mjsw=0.217168
++ pb=0.85
+
+
+**** RESUMING OPAMPLIFIERFINAL-SCHEMATIC1-newprof.sim.cir ****
+.END
+
+**** 01/05/23 17:08:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-newprof"  [ C:\OrCAD\OrCAD_16.6_Lite\tools\capture\OPAMPLIFIERFINAL-SCHEMATIC1-newprof.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               nfet            pfet            
+               NMOS            PMOS            
+       LEVEL    3               3            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD    1.647           2.2          
+         VTO     .786           -.119143     
+          KP    9.6379          2.9352       
+       GAMMA     .5863           .4863       
+         PHI     .6              .6          
+      LAMBDA    0               0            
+         RSH   85.45          104.7          
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .85         
+        PBSW     .8              .85         
+          CJ    3.8541          4.8447       
+        CJSW    1.394           1.6457       
+          MJ    1.1854           .5027       
+        MJSW     .125195         .217168     
+        CGSO    4.0241          5.3752       
+        CGDO    4.0241          5.3752       
+        CGBO    3.6144          3.365        
+        NSUB   16.160000E+15   18.900000E+15 
+         NFS    5.000000E+12    3.460000E+12 
+         TOX    2.12            2.12         
+          XJ  200.000000E-09  200.000000E-09 
+          UO  591.7           180.2          
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  208.200000E+03  373.200000E+03 
+       DELTA    6.967           1.52         
+       THETA    8.122           1.248        
+         ETA    7.066           1.641        
+       KAPPA    1.396           9.694        
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+INTERNAL ERROR -- Divide by Zero in device M_Q4, Divide
+
+ABORTING SIMULATION
+**** 01/05/23 17:08:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-newprof"  [ C:\OrCAD\OrCAD_16.6_Lite\tools\capture\OPAMPLIFIERFINAL-SCHEMATIC1-newprof.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =           9
+  External (NCNODS)                 =           9
+  Total (NUMNOD)                    =           9
+
+Total device count (NUMEL)          =          14
+  Capacitors (C)                    =           2
+  Current Sources (I)               =           1
+  MosFETs (M)                       =           8
+  Voltage Sources (V)               =           3
+
+Number of subcircuits (X)           =           0
+
+Matrix statistics:
+  Matrix size (NSTOP)               =          12
+  Initial no. elements (NTTAR)      =          44
+  No. elements w/ fillin (NTTBR)    =          44
+  No. fillins (IFILL)               =           0
+  No. overflows (NTTOV)             =           0
+  No. LU operations (IOPS)          =           0
+  Percent sparsity (PERSPA)         =      69.444
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =           0
+  No. rejected time points (NUMRTP) =           0
+  No. iterations (NUMNIT)           =           0
+
+Load Threads                        =           1
+
+Runtime statistics:                       Seconds      Iterations
+  Matrix load                       =        0.00
+  Matrix solution                   =        0.00               1
+  Readin                            =        0.00
+  General setup                     =         .02
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =        0.00
+  Total job time (using Solver 1)   =         .02
+
